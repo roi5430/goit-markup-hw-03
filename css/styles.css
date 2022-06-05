@@ -46,13 +46,14 @@ body {
   margin: 0 auto;
 }
 
-section {
+.section {
   padding-bottom: 94px;
   padding-top: 94px;
 }
 
 img {
   display: block;
+  max-width: 100%;
 }
 
 .header {
@@ -69,7 +70,6 @@ img {
 
 .logo {
   color: #000;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
   font-family: 'Raleway', sans-serif;
   text-decoration: none;
@@ -157,13 +157,13 @@ ul {
 .hero {
   background-color: #2f303a;
   text-align: center;
+  padding: 200px 0;
 }
 
 .flex {
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding: 200px 0;
 }
 
 .hero-title {
@@ -250,8 +250,7 @@ ul {
   justify-content: space-between;
 }
 
-.gallery-title,
-.team-title {
+.title {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.2;
@@ -263,7 +262,7 @@ ul {
 }
 
 .team {
-  background-color: #e5e5e5;
+  background-color: var(--btn-background-color);
 }
 
 .team-list {
@@ -306,6 +305,10 @@ ul {
 }
 
 .footer .logo {
+  display: inline-block;
+  margin-right: 0;
+  margin-bottom: 20px;
+
   color: var(--white-color);
   font-family: 'Raleway', sans-serif;
 }
@@ -313,19 +316,30 @@ ul {
 .address,
 .footer-e-mail,
 .footer-tel {
-  color: var(--white-color);
+  display: inline-block;
+  margin-bottom: 9px;
+
+  color: rgba(255, 255, 255, 0.6);
+
   font-style: normal;
   font-size: 14px;
   line-height: 1.7;
-
-  margin-top: 20px;
+  text-decoration: none;
 }
 
-.footer-e-mail,
 .footer-tel {
-  color: rgba(255, 255, 255, 0.6);
-  text-decoration: none;
-  padding-top: 9px;
+  margin-bottom: 0;
+}
+
+.footer-e-mail:hover,
+.footer-e-mail:focus,
+.footer-tel:focus,
+.footer-tel:hover {
+  color: var(--accent-color);
+}
+
+.address {
+  color: var(--white-color);
 }
 
 /* Портфоліо */
@@ -333,6 +347,11 @@ ul {
 .filters {
   display: flex;
   justify-content: center;
+  margin-bottom: 50px;
+}
+
+.filters li {
+  margin-right: 8px;
 }
 
 .filters-btn {
@@ -348,8 +367,6 @@ ul {
 
   border: none;
   padding: 6px 22px;
-  margin-bottom: 50px;
-  margin-right: 8px;
 }
 
 .filters-btn:focus,
@@ -357,7 +374,7 @@ ul {
 .filters-btn:active {
   color: var(--white-color);
   background-color: var(--accent-color);
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.25));
 }
 
 .portfolio {
@@ -385,6 +402,7 @@ ul {
   border: 1px solid #eeeeee;
   border-top: none;
   padding-left: 24px;
+  padding-right: 24px;
 }
 
 .portfolio-subtitle {
