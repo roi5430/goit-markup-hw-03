@@ -201,7 +201,8 @@ ul {
   border-radius: 4px;
 }
 
-.portfolio-title {
+.portfolio-title,
+.features-title {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -379,10 +380,11 @@ ul {
 .portfolio {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .element {
-  width: calc(100% / 3 - 60px);
+  width: calc(100% / 3 - 30px);
   margin-right: var(--typical-margin);
   margin-bottom: var(--typical-margin);
 }
