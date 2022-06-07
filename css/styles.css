@@ -340,10 +340,8 @@ address {
   text-decoration: none;
 }
 
-.footer-e-mail:hover,
-.footer-e-mail:focus,
-.footer-tel:focus,
-.footer-tel:hover {
+.footer-adr a:focus,
+.footer-adr a:hover {
   color: var(--accent-color);
 }
 
